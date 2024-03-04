@@ -1,4 +1,4 @@
-# Taller_1
+# Taller 1
 <table cellspacing="1" bgcolor="" align="center">
   <tr bgcolor="#252582">
     <th><b>Taller 1 - Parte 1</b></th>
