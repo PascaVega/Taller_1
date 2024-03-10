@@ -33,9 +33,9 @@
 #Realice un programa que lea tres números reales y determine cuál es el mayor.
 
 def introducir():
-    num1 = int(input("Ingrese el primer número. Ejemplo: 1.5: "))
-    num2 = int(input("Ingrese el primer número. Ejemplo: 2: "))
-    num3 = int(input("Ingrese el primer número. Ejemplo: 3.75: "))
+    num1 : float = float(input("Ingrese el primer número. Ejemplo: 1.5: "))
+    num2 : float = float(input("Ingrese el primer número. Ejemplo: 2: "))
+    num3 : float = float(input("Ingrese el primer número. Ejemplo: 3.75: "))
     desarrollo(num1,num2,num3)
 
 def desarrollo(num1,num2,num3):
@@ -59,16 +59,20 @@ def desarrollo(num1,num2,num3):
 
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Ingrese tres números reales para determinar cuál es el número mayor.")
+if __name__ == "__main__":
+    print("Ingrese tres números reales para determinar cuál es el número mayor.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
@@ -101,7 +105,7 @@ flowchart TD
 #Realice un programa que lea un número entero y determine si es par o impar.
 
 def introducir():
-    num1 = int(input("Ingrese el primer número entero. Ejemplo: 5: "))
+    num1 : int = int(input("Ingrese el primer número entero. Ejemplo: 5: "))
     desarrollo(num1)
 
 def desarrollo(num1):
@@ -114,16 +118,21 @@ def desarrollo(num1):
 
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Ingrese un número entero para determinar si par o impar.")
+if __name__ == "__main__":
+    print("Ingrese un número entero para determinar si par o impar.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
+
 # ! /\|=\/
 ```
 
@@ -144,8 +153,8 @@ while True:
 #Taller 1 - Punto 4
 #Realice un programa que lea dos números reales y determine si el primero es múltiplo del segundo.
 def introducir():
-    num1 = float(input("Ingrese el primer número: "))
-    num2 = float(input("Ingrese el segundo número: "))
+    num1 : float = float(input("Ingrese el primer número: "))
+    num2 : float = float(input("Ingrese el segundo número: "))
     desarrollo(num1,num2)
 
 def desarrollo(num1,num2):
@@ -157,16 +166,20 @@ def desarrollo(num1,num2):
         return
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Ingrese dos números reales para derminar si el primero es múltiplo del segundo.")
+if __name__ == "__main__":
+    print("Ingrese dos números reales para derminar si el primero es múltiplo del segundo.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
@@ -189,9 +202,9 @@ while True:
 #Realice un programa que lea tres números reales y determine si la suma de los dos primeros es mayor, menor o igual que el tercer número.
 
 def introducir():
-    num1 = float(input("Ingrese el primer número. Ejemplo: 5.6: "))
-    num2 = float(input("Ingrese el segundo número. Ejemplo: 10: "))
-    num3 = float(input("Ingrese el tercer número. Ejemplo: 8.75: "))
+    num1 : float = float(input("Ingrese el primer número. Ejemplo: 5.6: "))
+    num2 : float = float(input("Ingrese el segundo número. Ejemplo: 10: "))
+    num3 : float = float(input("Ingrese el tercer número. Ejemplo: 8.75: "))
     desarrollo(num1,num2,num3)
 
 def desarrollo(num1,num2,num3):
@@ -206,17 +219,20 @@ def desarrollo(num1,num2,num3):
         return
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Ingrese tres números para determinar si la suma de los dos primeros números es mayor, menor o igual al tercer número.")
+if __name__ == "__main__":
+    print("Ingrese tres números para determinar si la suma de los dos primeros números es mayor, menor o igual al tercer número.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
-
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 # ! /\|=\/
 ```
 
@@ -237,7 +253,7 @@ while True:
 #Taller 1 - Punto 6
 #Escriba un programa que solicite al usuario una letra y determine si es una vocal o una consonante.
 def introducir():
-    letra = input("Ingrese una letra: ").lower()
+    letra : str = input("Ingrese una letra: ").lower()
     desarrollo(letra)
 
 def desarrollo(letra):
@@ -250,16 +266,20 @@ def desarrollo(letra):
         return
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Ingrese una letra para conocer si es una vocal o una consonante")
+if __name__ == "__main__":
+    print("Ingrese una letra para conocer si es una vocal o una consonante")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
@@ -291,11 +311,11 @@ while True:
 #Promedio, mediana, promedio multiplicativo, ordenar los números de forma ascendente, ordenar los números de forma descendente, potencia del mayor número elevado al menor número, raíz cúbica del menor número.
 
 def introducir():
-    num1 = float(input("Ingrese el primer número. Ejemplo: 50.75: "))
-    num2 = float(input("Ingrese el segundo número. Ejemplo: 50.75: "))
-    num3 = float(input("Ingrese el tercer número. Ejemplo: 50.75: "))
-    num4 = float(input("Ingrese el cuarto número. Ejemplo: 50.75: "))
-    num5 = float(input("Ingrese el quinto número. Ejemplo: 50.75: "))
+    num1 : float = float(input("Ingrese el primer número. Ejemplo: 50.75: "))
+    num2 : float = float(input("Ingrese el segundo número. Ejemplo: 50.75: "))
+    num3 : float = float(input("Ingrese el tercer número. Ejemplo: 50.75: "))
+    num4 : float = float(input("Ingrese el cuarto número. Ejemplo: 50.75: "))
+    num5 : float = float(input("Ingrese el quinto número. Ejemplo: 50.75: "))
     desarrollo(num1,num2,num3,num4,num5)
 
 def desarrollo(num1,num2,num3,num4,num5):
@@ -306,12 +326,12 @@ def desarrollo(num1,num2,num3,num4,num5):
     print(f"Promedio: {promedio}")
 
     if len(numeros) % 2 == 0:
-        mediana = (numeros[len(numeros)//2-1] + numeros[len(numeros)//2])/2
+        mediana : float  = (numeros[len(numeros)//2-1] + numeros[len(numeros)//2])/2
     else:
         mediana = numeros[len(numeros)//2]
     print(f"Mediana: {mediana}")
 
-    promedio_multiplicativo = (num1*num2*num3*num4*num5)/5
+    promedio_multiplicativo : float = (num1*num2*num3*num4*num5)/5
     print(f"Promedio multiplicativo: {promedio_multiplicativo}")
 
     print(f"Números de forma ascendente: {numeros}")
@@ -319,24 +339,27 @@ def desarrollo(num1,num2,num3,num4,num5):
     numeros.sort(reverse=True)
     print(f"Números de forma descendente: {numeros}")
 
-    potencia = numeros[0]**numeros[-1]
+    potencia : float = numeros[0]**numeros[-1]
     print(f"potencia del mayor número elevado al menor número: {potencia}")
 
-    raiz = num1 ** (1/3)
+    raiz : float = num1 ** (1/3)
     print(f"La raiz cúbica del número menor: {raiz}")
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Ingrese cinco número para realizar determinadas operaciones.")
+if __name__ == "__main__":
+    print("Ingrese cinco número para realizar determinadas operaciones.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
-
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 # ! /\|=\/
 ```
 
@@ -358,9 +381,9 @@ while True:
 #Escriba un programa al que se le ingrese la frecuencia de una onda en hz y como salida arroje en que parte del espectro electromagnético se encuentra.
 
 def introducir():
-    frecuencia = float(input("Ingrese la frcuencia de una onda (en hz). Ejemplo: 50.75: "))
+    frecuencia : float = float(input("Ingrese la frcuencia de una onda (en hz). Ejemplo: 50.75: "))
     desarrollo(frecuencia)
-    parte_espectro = desarrollo(frecuencia)
+    parte_espectro : str = desarrollo(frecuencia)
     print(f"La frecuencia de onda {frecuencia} HZ se encuentra en la parte del espectro electromagnético {parte_espectro}")
 
 def desarrollo(frecuencia):
@@ -380,17 +403,20 @@ def desarrollo(frecuencia):
         return "Rayos Gamma"
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Ingrese la frecuencia en hz de una onda para determinar en qué parte del espectro electromagnético se encuentra.")
+if __name__ == "__main__":
+    print("Ingrese la frecuencia en hz de una onda para determinar en qué parte del espectro electromagnético se encuentra.")
 
-
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
@@ -413,7 +439,7 @@ while True:
 #Escriba un programa que reciba el nombre en minúsculas de un país de America y retorne la ciudad capital, si el país no pertenece al continente debe arrojar país no identificado.
 
 def introducir():
-    pais = input("Ingrese el nombre de un país. Ejemplo: Colombia: ").lower()
+    pais : str = input("Ingrese el nombre de un país. Ejemplo: Colombia: ").lower()
     desarrollo(pais)
     return pais
 
@@ -461,18 +487,23 @@ def desarrollo(pais):
         return "Paí no identificado"
     
 def continuar(pais):
-    capital = desarrollo(pais)
+    capital : str = desarrollo(pais)
     print(f"La capital de {pais.capitalize()} es: {capital}")
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para conocer la capital de un país de América")
+if __name__ == "__main__":
+    print("Programa para conocer la capital de un país de América")
+    
+    while True:
+        pais = introducir()
+        opcion = continuar(pais)
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
-while True:
-    pais = introducir()
-    opcion = continuar(pais)
-    if opcion == 2:
-        break
 # ! /\|=\/
 ```
 
@@ -500,35 +531,39 @@ while True:
 #Escriba un programa que dada una distancia calcule:
 #El tiempo que le tomaría a la luz recorrer la distancia, el tiempo que le tomaría al sonido (en el aire) recorrer la distancia, el tiempo que le tomaría al vehiculo comercial más veloz recorrer la distancia, el tiempo que le tomaría a Bolt recorrer la distancia.
 def introducir():
-    distancia = float(input("Ingrese una distancia en metros. Ejemplo: 5: "))
+    distancia : float = float(input("Ingrese una distancia en metros. Ejemplo: 5: "))
     desarrollo(distancia)
     return distancia
 
 def desarrollo(distancia):
-    tiempo1 = distancia/2.998e+8
+    tiempo1 : float = distancia/2.998e+8
     print(f"El tiempo que tarda la luz en recorrer {distancia} metros en el vacio es de: {tiempo1} segundos.")
 
-    tiempo2 = distancia/343
+    tiempo2 : float = distancia/343
     print(f"El tiempo que tarda el sonido en recorrer {distancia} metros en el aire (20°C) es de: {tiempo2} segundos.")
 
-    tiempo3 = distancia/136.2444
-    print(f"El tiempo que tarda el Bugatti Vhiron Super Sport 300+ en recorrer {distancia} metros en el aire es de: {tiempo3} segundos.")
+    tiempo3 : float = distancia/136.2444
+    print(f"El tiempo que tarda el Bugatti Chiron Super Sport 300+ en recorrer {distancia} metros en el aire es de: {tiempo3} segundos.")
 
-    tiempo4 = distancia/11.666
+    tiempo4 : float = distancia/11.666
     print(f"El tiempo que tarda Bolt en recorrer {distancia} metros en el aire es de: {tiempo4} segundos.")
     return
     
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para conocer la capital de un país de América")
+if __name__ == "__main__":
+    print("Programa para determinar cuánto tiempo le tomaría a ciertos elementos recorer esa distancia")
 
-while True:
-    pais = introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
