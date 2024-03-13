@@ -61,8 +61,8 @@ def ordenar_numeros(num1,num2,num3,num4,num5):
 # Encontrar el tercer número más pequeño y asignarlo a la tercera posición
     for i in range(2, 5):
         if numeros[i] == 0:
-            smallest_remaining = min([num for num in [num1, num2, num3, num4, num5] if num not in numeros])
-            numeros[i] = smallest_remaining
+            numero_menor = min([num for num in [num1, num2, num3, num4, num5] if num not in numeros])
+            numeros[i] = numero_menor
 
     return numeros
 
