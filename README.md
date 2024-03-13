@@ -300,7 +300,7 @@ if __name__ == "__main__":
    </td>
   </tr>
   <tr bgcolor="#e4e4ed">
-    <td style="color:#141414" align="center">Para este punto, primero se ordenan los números de forma ascendente en una lista, a partir de ahí se van ejecutando las operaciones correspondientes.</td>
+    <td style="color:#141414" align="center">Para este punto, primero se ordenan los números de forma ascendente en una lista a partir de una función propia <i>ordenar_numeros</i>, y desde ahí se van ejecutando las operaciones correspondientes.</td>
   </tr>
 </table>
 
@@ -309,6 +309,7 @@ if __name__ == "__main__":
 #Taller 1 - Punto 7
 #Escriba un programa que pida 5 números reales y calcule las siguientes operaciones: 
 #Promedio, mediana, promedio multiplicativo, ordenar los números de forma ascendente, ordenar los números de forma descendente, potencia del mayor número elevado al menor número, raíz cúbica del menor número.
+from ordenar import ordenar_numeros
 
 def introducir():
     num1 : float = float(input("Ingrese el primer número. Ejemplo: 50.75: "))
@@ -319,8 +320,7 @@ def introducir():
     desarrollo(num1,num2,num3,num4,num5)
 
 def desarrollo(num1,num2,num3,num4,num5):
-    numeros = [num1,num2,num3,num4,num5]
-    numeros.sort()
+    numeros = ordenar_numeros(num1,num2,num3,num4,num5)
 
     promedio = (num1+num2+num3+num4+num5)/5
     print(f"Promedio: {promedio}")
@@ -336,13 +336,13 @@ def desarrollo(num1,num2,num3,num4,num5):
 
     print(f"Números de forma ascendente: {numeros}")
 
-    numeros.sort(reverse=True)
-    print(f"Números de forma descendente: {numeros}")
+    numeros_descendentes = [numeros[4],numeros[3],numeros[2],numeros[1],numeros[0]]
+    print(f"Números de forma descendente: {numeros_descendentes}")
 
-    potencia : float = numeros[0]**numeros[-1]
+    potencia : float = numeros[4]**numeros[0]
     print(f"potencia del mayor número elevado al menor número: {potencia}")
 
-    raiz : float = num1 ** (1/3)
+    raiz : float = numeros[0] ** (1/3)
     print(f"La raiz cúbica del número menor: {raiz}")
 
 def continuar():
@@ -360,6 +360,79 @@ if __name__ == "__main__":
         elif opcion != 1 and 2:
             print("Sintax error")
             break
+# ! /\|=\/
+```
+
+**Función ordenar_numeros** 
+```python
+def ordenar_numeros(num1,num2,num3,num4,num5):
+    # Encontrar el primer número más pequeño y asignarlo a la primera posición
+    if num1 < num2 and num1 < num3 and num1 < num4 and num1 < num5:
+        numeros = [num1, 0, 0, 0, 0]
+    elif num2 < num1 and num2 < num3 and num2 < num4 and num2 < num5:
+        numeros = [num2, 0, 0, 0, 0]
+    elif num3 < num1 and num3 < num2 and num3 < num4 and num3 < num5:
+        numeros = [num3, 0, 0, 0, 0]
+    elif num4 < num1 and num4 < num2 and num4 < num3 and num4 < num5:
+        numeros = [num4, 0, 0, 0, 0]
+    else:
+        numeros = [num5, 0, 0, 0, 0]
+
+    # Encontrar el segundo número más pequeño y asignarlo a la segunda posición
+    if (num1 <= num2 and num1 <= num3 and num1 <= num4 and num1 <= num5) or numeros[0] == num1:
+        if num2 <= num3 and num2 <= num4 and num2 <= num5:
+            numeros[1] = num2
+        elif num3 <= num2 and num3 <= num4 and num3 <= num5:
+            numeros[1] = num3
+        elif num4 <= num2 and num4 <= num3 and num4 <= num5:
+            numeros[1] = num4
+        else:
+            numeros[1] = num5
+    elif num2 <= num1 and num2 <= num3 and num2 <= num4 and num2 <= num5:
+        if num1 <= num3 and num1 <= num4 and num1 <= num5:
+            numeros[1] = num1
+        elif num3 <= num1 and num3 <= num4 and num3 <= num5:
+            numeros[1] = num3
+        elif num4 <= num1 and num4 <= num3 and num4 <= num5:
+            numeros[1] = num4
+        else:
+            numeros[1] = num5
+    elif num3 <= num1 and num3 <= num2 and num3 <= num4 and num3 <= num5:
+        if num1 <= num2 and num1 <= num4 and num1 <= num5:
+            numeros[1] = num1
+        elif num2 <= num1 and num2 <= num4 and num2 <= num5:
+            numeros[1] = num2
+        elif num4 <= num1 and num4 <= num2 and num4 <= num5:
+            numeros[1] = num4
+        else:
+            numeros[1] = num5
+    elif num4 <= num1 and num4 <= num2 and num4 <= num3 and num4 <= num5:
+        if num1 <= num2 and num1 <= num3 and num1 <= num5:
+            numeros[1] = num1
+        elif num2 <= num1 and num2 <= num3 and num2 <= num5:
+            numeros[1] = num2
+        elif num3 <= num1 and num3 <= num2 and num3 <= num5:
+            numeros[1] = num3
+        else:
+            numeros[1] = num5
+    else:
+        if num1 <= num2 and num1 <= num3 and num1 <= num4:
+            numeros[1] = num1
+        elif num2 <= num1 and num2 <= num3 and num2 <= num4:
+            numeros[1] = num2
+        elif num3 <= num1 and num3 <= num2 and num3 <= num4:
+            numeros[1] = num3
+        else:
+            numeros[1] = num4
+
+# Encontrar el tercer número más pequeño y asignarlo a la tercera posición
+    for i in range(2, 5):
+        if numeros[i] == 0:
+            smallest_remaining = min([num for num in [num1, num2, num3, num4, num5] if num not in numeros])
+            numeros[i] = smallest_remaining
+
+    return numeros
+
 # ! /\|=\/
 ```
 
