@@ -484,7 +484,7 @@ def desarrollo(pais):
     if pais in paises_america:
         return paises_america[pais]
     else:
-        return "Paí no identificado"
+        return "País no identificado"
     
 def continuar(pais):
     capital : str = desarrollo(pais)
