@@ -325,16 +325,13 @@ def desarrollo(num1,num2,num3,num4,num5):
     promedio = (num1+num2+num3+num4+num5)/5
     print(f"Promedio: {promedio}")
 
-    if len(numeros) % 2 == 0:
-        mediana : float  = (numeros[len(numeros)//2-1] + numeros[len(numeros)//2])/2
-    else:
-        mediana = numeros[len(numeros)//2]
-    print(f"Mediana: {mediana}")
-
     promedio_multiplicativo : float = (num1*num2*num3*num4*num5)/5
     print(f"Promedio multiplicativo: {promedio_multiplicativo}")
 
     print(f"Números de forma ascendente: {numeros}")
+
+    mediana = numeros[2]
+    print(f"Mediana: {mediana}")
 
     numeros_descendentes = [numeros[4],numeros[3],numeros[2],numeros[1],numeros[0]]
     print(f"Números de forma descendente: {numeros_descendentes}")
